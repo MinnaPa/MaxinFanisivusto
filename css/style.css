@@ -1,0 +1,24 @@
+:root {
+    --primary-petrol: #0F4C5C;    /* Header, footer, napit */
+    --harness-turquoise: #1CA3B5; /* Korostukset, reunukset, focus */
+    --warm-caramel: #9E5422;      /* Tekstilinkit, lämpimät yksityiskohdat */
+    --bg-cream: #F9F7F3;          /* Sivun päätausta */
+    --card-sand: #EDE7DD;         /* Osioiden ja korttien tausta */
+    --text-dark: #1A2426;         /* Perusteksti */
+    --text-light: #FFFFFF;        /* Teksti tummalla pohjalla */
+}
+/* Leipäteksti (Canva Sans -tyyli) */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Pääotsikot (Bantayog-tyyli) */
+h1, h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Rento käsinkirjoitettu korostus esim. kuvateksteihin (Dekko) */
+.fun-text, figcaption {
+    font-family: 'Dekko', cursive;
+    font-size: 1.2rem;
+}
