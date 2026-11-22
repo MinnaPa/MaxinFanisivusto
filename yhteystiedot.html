@@ -15,6 +15,11 @@
     <!-- HEADER -->
     <header class="header">
         <a href="index.html" class="logo">Maxin fanisivusto</a>
+
+<!-- NAVIGAATIOT -->
+        <input type="checkbox" id="valikko-toggle" class="valikko-checkbox" aria-label="Avaa tai sulje valikko">
+        <label for="valikko-toggle" class="hampurilaisvalikko" aria-hidden="true">☰</label>
+
         <nav class="navi">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
@@ -25,5 +30,50 @@
         </nav>
     </header>
 
+    <!-- MAIN -->
+   <main class="main-sisalto">
+        <section class="tiimi-osio" aria-labelledby="tiimi-otsikko">
+            <h1 id="tiimi-otsikko">Tiimi</h1>
+            <p class="tiimi-esittely">
+                Tässä on tiimi Maxin fanisivuston takana.
+            </p>
+
+            <div class="tiimi-ruudukko">
+                <article class="tiimikortti">
+                    <img src="images/emmi.png" alt="Muotokuva Emmistä, projektin Product Ownerista" class="tiimikortti-kuva">
+                    <h2>Emmi</h2>
+                    <p class="rooli">Product Owner</p>
+                    <p>Vastaa tuotteen visiosta, priorisoi kehitystehtävät ja huolehtii siitä, että tiimi rakentaa oikeita asioita.</p>
+                </article>
+
+                <article class="tiimikortti">
+                    <img src="images/max.png" alt="Valkoinen koira Max, projektin Chief Happiness Officer" class="tiimikortti-kuva">
+                    <h2>Max</h2>
+                    <p class="rooli fun-text">Chief Happiness Officer</p>
+                    <p>Projektin todellinen tähti ja inspiraation lähde. Vastaa laadunvalvonnasta, karismaattisesta brändistä ja päivittäisestä motivaatiosta.</p>
+                </article>
+
+                <article class="tiimikortti">
+                    <img src="images/minna.jpg" alt="Muotokuva Minnasta, projektin Scrum Masterista" class="tiimikortti-kuva">
+                    <h2>Minna</h2>
+                    <p class="rooli">Scrum Master</p>
+                    <p>Huolehtii tiimin yhteistyöstä, Scrum-prosessin sujuvuudesta ja projektin etenemisestä. Poistaa kehitystyön esteitä ja pitää kokonaisuuden hallinnassa.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="yhteystiedot-osio" aria-labelledby="yhteystiedot-otsikko">
+            <h2 id="yhteystiedot-otsikko">Ota yhteyttä</h2>
+            <p>Onko sinulla kysyttävää Maxista, kuvista tai hoito-ohjeista? Laita meille viestiä:</p>
+            <p>
+                <strong>Sähköposti:</strong>
+                <a href="mailto:maxin.tiimi@esimerkki.fi" class="yhteyslinkki">maxin.tiimi@esimerkki.fi</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Maxin fanisivusto – Emmi, Max &amp; Minna</p>
+    </footer>
 </body>
 </html>
