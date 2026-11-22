@@ -10,6 +10,7 @@
 /* Leipäteksti (Canva Sans -tyyli) */
 body {
     font-family: 'Inter', sans-serif;
+    margin: 0;
 }
 
 /* Pääotsikot (Bantayog-tyyli) */
@@ -22,3 +23,106 @@ h1, h2 {
     font-family: 'Dekko', cursive;
     font-size: 1.2rem;
 }
+
+/* HEADER ja NAVIGAATIO */
+.header {
+    background-color: #0F4C5C;
+    color: #FFFFFF;
+    position: sticky; 
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header .logo {
+    font-size: 1.75rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.valikko-checkbox, .hampurilaisvalikko{
+    display: none; 
+}
+
+.navi > ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navi a:hover {
+    color: #1CA3B5; 
+}
+
+
+/*Jos pöytäkone edellä, niin ehdotus mobiilille, mutta muutettavissa toisin päin ym.*/
+@media (max-width: 768px){
+
+    .header {
+    position: static;
+    }
+
+    .navi {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .valikko-checkbox {
+        display: block;
+        position: absolute; 
+        width: 1px; 
+        height: 1px;
+    }
+    
+    .hampurilaisvalikko {
+        display: block;
+        margin-left: auto;
+        padding: 3px 8px; 
+        border: 2px solid; 
+        border-radius: 5px;
+        cursor: pointer; 
+}
+    .valikko-checkbox:checked ~.navi{
+        display: flex;
+    }
+}
+
+/*MAIN*/
+
+/* Hero-osuus*/
+.hero {
+    background-color: #EDE7DD;
+    color: #1A2426;
+    padding: 80px 0;
+    background-image: url("../images/hero-kuva-4032x2268.jpg");
+    background-size: cover;
+    background-position: center 60%;
+}
+
+.hero-sisalto {
+    position: relative;
+    display: inline-block;
+    padding: 10px; 
+    top: 5px; 
+/*Teksti olisi paremman näköinen vähän ylempänä ja irti reunasta, mutta en saanut asetuksia toimimaan */
+}
+
+/* Hero-kuva poistuu mobiilinäkymässä: */
+@media (max-width: 768px) {
+    .hero {
+        background-image: none;
+        padding: 32px 0; 
+    }
+}
+
+
+
+

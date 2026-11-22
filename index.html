@@ -3,13 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etusivu / Maxin Fanisivusto</title>
     <!--Google Fonts: *Inter, Quicksand, Dekko-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dekko&family=Inter:wght@400;600&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">Maxin fanisivusto</a>
+
+        <!-- NAVIGAATIOT -->
+        <!-- Hampurilasvalikko mobiilinäkymää varten -->
+        <input type="checkbox" id="valikko-auki" class="valikko-checkbox">
+        <label for="valikko-auki" class="hampurilaisvalikko">
+            ☰
+        </label>
+        <!-- Perusnavigaatiopalkki -->
+        <nav class="navi">
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="hoito.html">Hoito-ohjeet</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+     <!--Hero-osuus-->
+    <main>
+        <section class="hero">
+            <div class="hero-sisalto">
+                <h1 id="paaotsikko">Yhden koiran monta tarinaa</h1>
+                <p>Pienet tassut, suuret seikkailut </p>
+            </div>
+        </section>
+
+        <!-- Luokan nimeä voi muokata vaikka sitten, jos tulee css-asetuksia korteille tmv., tai sitten pitää muistaa erikseen tämän luokan mukkauksia tehdä css:ssä, koska nyt vasta teksti-->
+        <section class="intro">
+            <h2>Tervetuloa Maxin maailmaan!</h2>
+            <p>Max on iloinen 3-vuotias bichon frisé, jonka elämässä tärkeintä ovat ihmiset, leikkiminen ja herkut. Vapaa-ajallaan hän jahtaa palloja, matkustelee uusiin paikkoihin ja viettää pitkiä lepohetkiä peiton alla. 
+                <br> Erityisesti talvisin Max on elementissään. Lumihanget muuttuvat leikkikentäksi, ja valkoisen turkin vuoksi hän sulautuu maisemaan lähes täydellisesti. 
+                <br> Tällä sivustolla voit tutustua Maxin parhaisiin kuviin, lukea hänen hoidostaan ja ottaa yhteyttä, jos haluat tietää tästä hurmaavasta karvapallosta lisää.
+            </p>
+        </section>
+
+
+
+
+    </main>
+
 </body>
+
 </html>
