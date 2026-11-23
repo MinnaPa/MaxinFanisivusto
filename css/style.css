@@ -10,10 +10,13 @@
 /* Leipäteksti (Canva Sans -tyyli) */
 body {
     font-family: 'Inter', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
     margin: 0;
+    line-height: 1.6;
 }
 
-/* Pääotsikot (Bantayog-tyyli) */
+/* Pääotsikot */
 h1, h2 {
     font-family: 'Quicksand', sans-serif;
 }
@@ -24,11 +27,24 @@ h1, h2 {
     font-size: 1.2rem;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* Saavutettava näppäimistökohdistus */
+a:focus-visible,
+button:focus-visible,
+.hampurilaisvalikko:focus-visible {
+    outline: 3px solid var(--harness-turquoise);
+    outline-offset: 3px;
+}
+
 /* HEADER ja NAVIGAATIO */
 .header {
-    background-color: #0F4C5C;
-    color: #FFFFFF;
-    position: sticky; 
+    background-color: var(--primary-petrol);
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
     z-index: 100;
     display: flex;
     flex-wrap: wrap;
@@ -39,11 +55,12 @@ h1, h2 {
 
 .header .logo {
     font-size: 1.75rem;
+    font-weight: 700;
 }
 
 .header a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--text-light);
 }
 
 .valikko-checkbox, .hampurilaisvalikko{
@@ -54,10 +71,12 @@ h1, h2 {
     display: flex;
     gap: 30px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navi a:hover {
-    color: #1CA3B5; 
+    color: var(--harness-turquoise);; 
 }
 
 
@@ -66,18 +85,26 @@ h1, h2 {
 
     .header {
     position: static;
+    padding: 16px 20px;
     }
 
     .navi {
         display: none;
         width: 100%;
         flex-direction: column;
-        gap: 0;
+        gap: 12px;
+        padding-top: 16px;
+    }
+
+    .navi > ul {
+        flex-direction: column;
+        gap: 12px;
     }
 
     .valikko-checkbox {
         display: block;
-        position: absolute; 
+        position: absolute;
+        opacity: 0; 
         width: 1px; 
         height: 1px;
     }
@@ -86,7 +113,7 @@ h1, h2 {
         display: block;
         margin-left: auto;
         padding: 3px 8px; 
-        border: 2px solid; 
+        border: 2px solid var(--text-light); 
         border-radius: 5px;
         cursor: pointer; 
 }
@@ -99,19 +126,21 @@ h1, h2 {
 
 /* Hero-osuus*/
 .hero {
-    background-color: #EDE7DD;
-    color: #1A2426;
-    padding: 80px 0;
+    background-color: var(--card-sand);
+    color: var(--text-dark);
+    padding: 48px 40px 140px 40px;
     background-image: url("../images/hero-kuva-4032x2268.jpg");
     background-size: cover;
     background-position: center 60%;
 }
 
 .hero-sisalto {
-    position: relative;
     display: inline-block;
-    padding: 10px; 
-    top: 5px; 
+    max-width: 540px;
+    padding: 20px 24px;
+    background-color: rgba(249, 247, 243, 0.92);
+    border-left: 5px solid var(--harness-turquoise);
+    border-radius: 6px;
 /*Teksti olisi paremman näköinen vähän ylempänä ja irti reunasta, mutta en saanut asetuksia toimimaan */
 }
 
@@ -119,10 +148,89 @@ h1, h2 {
 @media (max-width: 768px) {
     .hero {
         background-image: none;
-        padding: 32px 0; 
+        padding: 32px 20px;
+    }
+
+    .hero-sisalto {
+        display: block;
+        max-width: 100%;
+        padding: 16px;
+        background-color: var(--card-sand);
     }
 }
 
+/* Yhteystieto-osion tyylit */
+.main-sisalto {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 64px;
+}
 
+.tiimi-osio {
+    text-align: center;
+}
 
+.tiimi-esittely {
+    max-width: 650px;
+    margin: 0 auto 36px;
+}
+
+.tiimi-ruudukko {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.tiimikortti {
+    background-color: var(--card-sand);
+    border: 2px solid var(--harness-turquoise);
+    border-radius: 16px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tiimikortti-kuva {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-petrol);
+}
+
+.rooli {
+    font-weight: 600;
+    color: var(--primary-petrol);
+    margin: 0;
+}
+
+.yhteystiedot-osio {
+    margin-top: 48px;
+    padding: 28px;
+    background-color: var(--card-sand);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.yhteyslinkki {
+    color: var(--warm-caramel);
+    font-weight: 600;
+}
+
+.footer {
+    background-color: var(--primary-petrol);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
+
+.tiimikortti-kuva {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
