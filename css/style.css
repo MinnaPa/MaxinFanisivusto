@@ -80,7 +80,7 @@ button:focus-visible,
 }
 
 
-/*Jos pöytäkone edellä, niin ehdotus mobiilille, mutta muutettavissa toisin päin ym.*/
+/* HEADER JA NAVIGAATIO; MOBIILINÄKYMÄ */
 @media (max-width: 768px){
 
     .header {
@@ -124,6 +124,7 @@ button:focus-visible,
 
 /*MAIN*/
 
+/* Etusivu */
 /* Hero-osuus*/
 .hero {
     background-color: var(--card-sand);
@@ -141,10 +142,9 @@ button:focus-visible,
     background-color: rgba(249, 247, 243, 0.92);
     border-left: 5px solid var(--harness-turquoise);
     border-radius: 6px;
-/*Teksti olisi paremman näköinen vähän ylempänä ja irti reunasta, mutta en saanut asetuksia toimimaan */
 }
 
-/* Hero-kuva poistuu mobiilinäkymässä: */
+/* Hero-kuva poistuu mobiilinäkymässä */
 @media (max-width: 768px) {
     .hero {
         background-image: none;
@@ -156,6 +156,28 @@ button:focus-visible,
         max-width: 100%;
         padding: 16px;
         background-color: var(--card-sand);
+    }
+}
+
+/* Etusivun teksti ja kuva */
+.intro {
+    max-width: 1000px;
+    margin: 48px auto;
+    padding: 40px 24px 64px;
+    background-color: var(--card-sand);
+    border-radius: 12px;
+}
+
+.intro-kuva img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        margin: 40px 10px; 
     }
 }
 
